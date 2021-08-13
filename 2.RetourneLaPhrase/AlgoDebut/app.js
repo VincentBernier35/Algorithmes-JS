@@ -1,8 +1,30 @@
+// function retourneLaPhrase(str) {
+//     const phrase = str;
+//     const entableau = phrase.split('');
+//     const alenvers = entableau.reverse();
+//     const final = alenvers.join('');
+//     return final
+// }
+
+// console.log(retourneLaPhrase("vive la programmation !"));
+
+
+
+
 function retourneLaPhrase(str) {
+
+    return str.split('').reverse('').join('');
 
 }
 
-console.log(retourneLaPhrase("Bonjour à tous"));
+console.log(retourneLaPhrase("bonjour !"));
+
+
+
+
+
+
+
 
 
 // ----------------- ÉNONCÉ -----------------
