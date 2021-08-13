@@ -1,9 +1,19 @@
+
 function conversion(degCel) {
 
+    const resultatsConversion = degCel * (9/5) + 32;
+    
+    if (typeof degCel === 'number') {
+        return resultatsConversion
+    } else {
+        return "Données en entrée non correctes."
+    }
 
 }
 
 console.log(conversion(50));
+
+
 
 
 
@@ -29,4 +39,4 @@ console.log(conversion(50));
 
 
 
-
+//tip : if else => pour voir si c'est un nombre
