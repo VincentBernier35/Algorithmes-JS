@@ -1,6 +1,5 @@
 function finSimilaire(str, fin) {
-
-
+   return finSimilaire
 }
 
 console.log(finSimilaire("ours", "rs"));
