@@ -1,6 +1,33 @@
 function plusGrandNb(arr) {
+ 
+  //resultats
+
+  var resultats = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    // premier tableau première valeur
+    var nbMax = arr [i][0];
+
+    for(var n = 1; n <arr[i].length; n++){
+
+      if (arr[i][n] > nbMax) {
+        nbMax = arr[i][n];
+      }
+    }
+    resultats.push(nbMax);
+  }
+
+  return resultats;
+
+
+
 
 }
+  
+  
+  
+  
+  
 
 
 console.log(plusGrandNb([
