@@ -1,5 +1,14 @@
 function finSimilaire(str, fin) {
-   return finSimilaire
+   var finDuMot = str.slice(-fin.length);
+  console.log(finDuMot);
+
+      if (finDuMot === fin) {
+         return "La fin est similaire";
+      } else {
+         return "La fin ne correspond pas";
+      }
+
+   
 }
 
 console.log(finSimilaire("ours", "rs"));
