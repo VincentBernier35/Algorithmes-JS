@@ -1,33 +1,31 @@
 function plusGrandNb(arr) {
  
-  //resultats
-
+  // premiere itération
   var resultats = [];
+  for (global = 0; global < arr.length; global++) {
 
-  for (var i = 0; i < arr.length; i++) {
-    // premier tableau première valeur
-    var nbMax = arr [i][0];
 
-    for(var n = 1; n <arr[i].length; n++){
+    // deuxième itération 
+    var nbMax = arr [global][0];
+    for(sousTableau = 0; sousTableau <arr[global].length; sousTableau++){
 
-      if (arr[i][n] > nbMax) {
-        nbMax = arr[i][n];
+
+      //condition pour chercher la valeur max
+      if (arr[global][sousTableau] > nbMax) {
+        nbMax = arr[global][sousTableau];
       }
     }
+
+    //conclusion et résultats
     resultats.push(nbMax);
   }
 
   return resultats;
 
 
-
-
 }
   
-  
-  
-  
-  
+
 
 
 console.log(plusGrandNb([
@@ -52,8 +50,12 @@ console.log(plusGrandNb([
 
 // la méhode [].push(), pour pousser un élément dans un tableau;
 // Testez :
+
+
 // var arrTest = [0,10];
 // arrTest.push(80);
+// arrTest.push(870);
+// arrTest.push(80506);
 // console.log(arrTest);
 
 

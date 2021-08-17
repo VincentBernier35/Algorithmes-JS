@@ -1,9 +1,21 @@
 function maj(str) {
 
+    var tableauMinus = str.toLowerCase().split(' ');
+
+    var resultat = tableauMinus.map(function(val){
+        return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+    });
+
+
+    var chaineFinale = resultat.join(" ");
+
+
+    console.log(chaineFinale);
   
+
 }
 
-console.log(maj("Les sanglots longs des violons de l'automne..."));
+console.log(maj("Les sanglots longs des violons de l'automne....."));
 
 
 // ----------------- ÉNONCÉ -----------------
@@ -21,5 +33,4 @@ console.log(maj("Les sanglots longs des violons de l'automne..."));
 // charAt(); pour sélectionner un caratère.
 // split(); pour transformer string->tableau.
 // replace(); pour remplacer une partie d'une chaine.
-
 
