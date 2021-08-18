@@ -1,4 +1,15 @@
 function memeLettres(arr) {
+    var test = arr[1].toLowerCase();
+    var cible = arr[0].toLowerCase();
+
+    for(var i = 0; i < test.length; i++) {
+
+        if(cible.indexOf(test[i]) === -1) {
+            return false;
+        }
+    }
+
+return true; 
 
 }
 console.log(memeLettres(["concupiscence", "sens"]));
