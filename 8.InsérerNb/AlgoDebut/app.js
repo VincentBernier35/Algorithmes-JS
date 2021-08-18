@@ -1,8 +1,40 @@
+// first way to solved it------
+
+// function insere(arr, num) {
+//     var tri = arr.sort();
+//     console.log(arr);
+
+// for (let index = 0; index < arr.length; index++) {
+//     if(arr[index] >= num) {
+//         return index
+//     }
+// }
+
+
+
+// }
+
+// console.log(insere([30,45,87,96,54,29], 60));
+
+//---------------------------------
+
+// 2nd way to solved it -------
+
 function insere(arr, num) {
+
+    arr.push(num);
+
+
+    arr.sort();
+
+    return arr.indexOf(num);
+  
+
 
 }
 
 console.log(insere([30,45,87,96,54,29], 60));
+
 
 // ----------------- ÉNONCÉ -----------------
 
