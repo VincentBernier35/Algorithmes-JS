@@ -1,10 +1,65 @@
+
+// // 1 -------------------------
+
+// function trouverLongueurMax(str){
+
+//     var mots = str.split(' ');
+//     var motsMax = "";
+
+//     for(var i = 0; i < mots.length; i ++){
+//         if(mots[i].length > motsMax){
+//             motsMax = mots[i].length;
+//         }
+//     }
+// return motsMax;
+
+// }
+
+
+// console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
+
+// //2 -------------------------------
+
+
+// function trouverLongueurMax(str){
+
+//     var arr = str.split(' ');
+
+//     return arr.reduce(function(x, y){
+//         return Math.max(x, y.length)
+//     }, 0);
+
+
+// }
+
+
+// console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
+
+
+// 3 --------------------------------------
+
 function trouverLongueurMax(str){
 
+    var arr = str.split(' ');
 
+    if(arr.length === 1){
+        return arr[0].length;
+    }
+
+    if(arr[0].length >= arr[1].length){
+        arr.splice(1, 1);
+        return trouverLongueurMax(arr.join(' '));
+    }
+
+    if(arr[0].length <= arr[1].length){
+        return trouverLongueurMax(arr.slice(1, arr.length).join(' '));
+    }
 }
 
 
 console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
+
+
 
 
 
