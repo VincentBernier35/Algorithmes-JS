@@ -1,9 +1,24 @@
+
+
 function additionner(arr) {
 
+    var max = Math.max(arr[0], arr[1]);
+    var min = Math.min(arr[0], arr[1]);
+    var acc = 0;
+
+    for(var i = min; i <= max; i++){
+        acc += i;
+
+    }
+    return (acc);
 
 }
 
-console.log(additionner([4, 10000000]));
+console.log(additionner([10, 4]));
+
+
+
+
 // 1+2+3+4 = 10
 
 // ----------------- ÉNONCÉ -----------------
@@ -15,6 +30,3 @@ console.log(additionner([4, 10000000]));
 
 // Boucle "for".
 // Math.max
-// Math.mix
-
-
