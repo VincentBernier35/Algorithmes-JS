@@ -1,17 +1,23 @@
 function finSimilaire(str, fin) {
-   var finDuMot = str.slice(-fin.length);
-  console.log(finDuMot);
 
-      if (finDuMot === fin) {
-         return "La fin est similaire";
-      } else {
-         return "La fin ne correspond pas";
-      }
+    const lengthStr = fin.length;
+    // console.log(lengthStr);
 
-   
+    const finDuMot = str.slice(- lengthStr);
+    // console.log(finDuMot);
+    
+    if (finDuMot == fin){
+
+        return "oui, la fin est similaire"
+
+    } else {
+        return "La fin ne correspond pas"
+    }
+
+
 }
 
-console.log(finSimilaire("ours", "rs"));
+console.log(finSimilaire("ours", "s"));
 
 
 
