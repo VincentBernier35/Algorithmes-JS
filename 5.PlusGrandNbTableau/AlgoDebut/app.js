@@ -1,31 +1,25 @@
 function plusGrandNb(arr) {
- 
-  // premiere itération
+
+  // Resultats
   var resultats = [];
-  for (global = 0; global < arr.length; global++) {
 
+  for (var i = 0; i < arr.length; i++){
+      // Premier tableau, premiere valeur
+      var nbMax = arr[i][0];
 
-    // deuxième itération 
-    var nbMax = arr [global][0];
-    for(sousTableau = 0; sousTableau <arr[global].length; sousTableau++){
+      for(var n = 1; n < arr[i].length; n++){
 
+        if(arr[i][n] > nbMax) {
+          nbMax = arr[i][n];
+        }
 
-      //condition pour chercher la valeur max
-      if (arr[global][sousTableau] > nbMax) {
-        nbMax = arr[global][sousTableau];
       }
-    }
 
-    //conclusion et résultats
-    resultats.push(nbMax);
+      resultats.push(nbMax);
   }
 
   return resultats;
-
-
 }
-  
-
 
 
 console.log(plusGrandNb([
