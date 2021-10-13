@@ -1,21 +1,20 @@
 
-function conversion(degCel) {
+function conversion (degCel) {
 
-    const resultatsConversion = degCel * (9/5) + 32;
-    
-    if (typeof degCel === 'number') {
-        return resultatsConversion
+
+    const what = typeof (degCel) ;
+    const result = (degCel * (9/5) + 32);
+
+
+    if (what === "number") {
+        return result;
     } else {
-        return "Données en entrée non correctes."
+        return "Données en entrée non exactes";
     }
 
-}
+};
 
-console.log(conversion(50));
-
-
-
-
+console.log(conversion(5));
 
 // ----------------- ÉNONCÉ -----------------
 
