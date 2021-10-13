@@ -1,12 +1,9 @@
 function factoriser(num) {
 
-for (i = 1; num > 1; num--) {
-
-    i = num * i;
-   
-}
-return i;
-
+    for(i = 1; num > 1; num--){
+        i = num * i;
+    }
+    return i;
 
 }
 
