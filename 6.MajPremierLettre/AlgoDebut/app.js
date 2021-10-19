@@ -1,18 +1,12 @@
 function maj(str) {
 
-    var tableauMinus = str.toLowerCase().split(' ');
-
-    var resultat = tableauMinus.map(function(val){
-        return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
-    });
+var arrayLower = str.toLowerCase().split(' ');
 
 
-    var chaineFinale = resultat.join(" ");
-
-
-    console.log(chaineFinale);
-  
-
+var resultats = arrayLower.map(function(val){
+    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+});
+return resultats.join(" ");
 }
 
 console.log(maj("Les sanglots longs des violons de l'automne....."));
