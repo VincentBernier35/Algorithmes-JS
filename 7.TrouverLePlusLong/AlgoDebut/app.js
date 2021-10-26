@@ -1,63 +1,57 @@
 
-// // 1 -------------------------
 
 // function trouverLongueurMax(str){
 
 //     var mots = str.split(' ');
-//     var motsMax = "";
+//     var longMax = 0;
 
-//     for(var i = 0; i < mots.length; i ++){
-//         if(mots[i].length > motsMax){
-//             motsMax = mots[i].length;
+//     for(var i = 0; i < mots.length; i++) {
+//         if(mots[i].length > longMax){
+//             longMax = mots[i].length;
 //         }
 //     }
-// return motsMax;
-
+//     return longMax;
 // }
 
 
 // console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
-
-// //2 -------------------------------
-
 
 // function trouverLongueurMax(str){
 
 //     var arr = str.split(' ');
 
-//     return arr.reduce(function(x, y){
-//         return Math.max(x, y.length)
+//     return arr.reduce(function(accumulateur, valeurCourante){
+
+//         return Math.max(accumulateur, valeurCourante.length)
+
 //     }, 0);
-
-
 // }
 
 
 // console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
 
 
-// 3 --------------------------------------
-
 function trouverLongueurMax(str){
 
-    var arr = str.split(' ');
+    var array = str.split(' ');
 
-    if(arr.length === 1){
-        return arr[0].length;
+    
+    if(array.length === 1){
+        return array[0].length;
     }
 
-    if(arr[0].length >= arr[1].length){
-        arr.splice(1, 1);
-        return trouverLongueurMax(arr.join(' '));
+    if(array[0].length >= array[1].length){
+        array.splice(1,1);
+        return trouverLongueurMax(array.join(' '));
     }
 
-    if(arr[0].length <= arr[1].length){
-        return trouverLongueurMax(arr.slice(1, arr.length).join(' '));
+    if(array[0].length <= array[1].length){
+        return trouverLongueurMax(array.slice(1, array.length).join(' '));
     }
+
 }
-
-
 console.log(trouverLongueurMax("Du sublime au ridicule il n'y a qu'un pas."));
+
 
 
 
